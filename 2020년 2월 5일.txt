@@ -1,0 +1,120 @@
+자신만의 장점이 있으면 된다.
+
+세상은 실력 좋은 사람, 보통, 실력 나쁜 사람 어우러져 산다.
+
+너무 걱정하지말자, 어려운 과정이다. 컴공내에서도 편차가 심하다.
+
+
+UI 관점, US관점
+
+공학적 관점
+UI : 제주도까지 가는데 가장 효과적인 방법? 이걸 연구하는것
+거리, 비용 등, 예 : 비행기
+
+비공학적 관점
+US : 제주도까지 가는데, 좋아하는 사람과 같이 가는것
+
+한 분야에 오래하면, 창의성이 떨어진다.
+
+
+
+###########################################
+
+unit test : 간이테스트 중요하다.
+
+새로운 개념을 테스트 할때는 독립적인 셀에서 코딩하는게 좋다.
+
+시험 많이 내는것중에 하나가, 피보나치 많이 낸다.
+
+재귀함수를 쓰면, 스택이 깊어지면 깊어질수록, 시간이 많이 걸린다.
+
+############################################
+검색 서비스 URL 분석
+
+웹서버에 요청하는 방식
+
+웹서버에 클라이언트의 data를 전송하기 위한 전송방법
+GET방식과 POST방식은 전달하는 방식에서 차이가 있다.
+
+GET : URL을 통해 data 전송
+GET방식으로 전송할 수 있는 data 크기는 한계가 있다.
+전송 URL이 노출된다.
+http://xxx/service?name1=value1&name2=value2
+
+POST : Body를 통해 data 전송
+길이 제한이 없다.
+
+Google 검색
+네이버 검색
+다음 영화 검색
+
+#웹에다가 이렇게 전송해야한다. 이를 인코딩이라 한다.
+https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EB%B6%80%EC%82%B0+%EA%B4%91%EC%97%AD%EC%8B%9C+%EB%82%A0%EC%94%A8
+query에다가 내가 원하는 파라미터를 넣으면 된다.
+
+https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=iot
+#한글은 안된다.
+https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=부산광역시날씨
+
+
+#이게 셀렉터 문법
+앞의 #은 id #main_pack이라는 아이디 > 자식클래스의 자식클래스의.... 이게 날씨 정보 들어가 있는것의 풀경로
+#main_pack > div.sc.cs_weather._weather > div:nth-child(2) > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > p > span.todaytemp
+
+
+
+https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EC%A0%9C%EC%A3%BC%EB%8F%84%EB%82%A0%EC%94%A8
+
+#구글 음성 -> 텍스트 변환 모듈
+text to speech
+pip install gtts
+gtts
+
+#구글 텍스트 -> 음성 변환 모듈
+speech to text
+gstt
+
+###############################
+Fulfillment 개요
+Dialogflow 에이전트가 의도에 따라 비즈니스 로직을 호출
+Dialogflow의 자연어 처리로 추출한 정보를 사용하여 동적 응답 생성
+
+지금 하는 웹은 우리가 뭘 하든간에 기본적으로 해야한다.
+
+파이썬에서 웹서버 구축
+1. 플라스크
+2. 장고
+
+편집기 : 지구
+브라우저 : 달나라
+
+인터넷 : 전송해주는 매개체
+
+
+Secure Tunnels(NGROK)
+1. 공인 IP 아니여도 외부에서 접속 가능하게 하는 터널 프로그램
+2. 방화벽 내부 서버를 외부에서 접속 가능
+3. Mac, Linux, Windows, 모바일 지원
+4. 유료와 무료버전 존재
+
+http://10.5.4.115:3000/dialogflow
+
+fulfillment에 반드시, https라고 써주어야 한다.
+https://58257a4c.ngrok.io/dialogflow
+
+모든 인텐트가 서버를 다녀올 필요가 없다. 그것을 세팅을 해야한다.
+인텐트마다 개별적으로 설정해주어야 한다.
+인텐트의 Fulfillment세팅에서 체크해주면 된다.
+
+
+####웹서버 챗봇 연동####
+1. jupyter notebook text에 소스코드작성 및 저장
+
+2. 커맨드 창 위에 python server.py 실행
+
+3. 인터넷 웹화면 확인
+
+4. ngrok 실행 후, ngrok http 포트번호 입력
+
+5. dialog fulfillment로 가서, 설정
+
